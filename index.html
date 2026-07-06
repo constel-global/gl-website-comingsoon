@@ -9,7 +9,7 @@
 } catch(e) {} })();
 </script>
 <title>GravityLabs — Something big is coming</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="logo.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -263,14 +263,12 @@ nav {
   gap: 8px;
   text-decoration: none;
 }
-.logo-icon {
-  width: 28px; height: 28px;
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
+.logo-img {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
   flex-shrink: 0;
 }
-.logo-icon svg { width: 14px; height: 14px; }
 .logo-wordmark {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(0.8125rem, 0.72rem + 0.52vw, 0.9375rem);
@@ -797,13 +795,7 @@ footer {
   <!-- Nav -->
   <nav>
     <a class="logo" href="#">
-      <div class="logo-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-          <path d="M2 17l10 5 10-5"/>
-          <path d="M2 12l10 5 10-5"/>
-        </svg>
-      </div>
+      <img class="logo-img" src="logo.png" alt="GravityLabs Logo">
       <span class="logo-wordmark">GRAVITYLABS</span>
     </a>
     <div class="nav-end">
@@ -983,7 +975,7 @@ function handleNotify() {
 var GL_THEME_KEY = 'gl-theme';
 
 /** Countdown target (UTC, ISO 8601). Change to your launch date/time. */
-var GL_LAUNCH_AT = Date.parse('2026-06-19T14:00:00.000Z');
+var GL_LAUNCH_AT = Date.parse('2026-08-01T00:00:00.000Z');
 
 function pad2(n) {
   return String(n).padStart(2, '0');
